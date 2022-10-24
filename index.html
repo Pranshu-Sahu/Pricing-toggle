@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap"
+      rel="stylesheet" />
+    <script>
+      tailwind.config = {
+        theme: {
+          fontFamily: {
+            sans: ["Montserrat", "sans-serif"],
+          },
+          extend: {
+            colors: {
+              primary: {
+                50: "hsl(240, 78%, 98%)",
+                100: "hsl(234, 14%, 74%)",
+                200: "hsl(233, 13%, 49%)",
+                300: "hsl(232, 13%, 33%)",
+              },
+              neutral: {
+                50: "hsl(236, 72%, 79%)",
+                100: "hsl(237, 63%, 64%)",
+              },
+            },
+          },
+        },
+      };
+    </script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Pricing toggle</title>
+  </head>
+  <body class="min-h-screen bg-primary-50 pt-8">
+    <header class="text-center text-primary-200">
+      <h1 class="text-2xl mb-3">Our Pricing</h1>
+      <div class="flex items-center justify-center w-full mb-12">
+        <div class="mr-3 font-medium">Annually</div>
+        <label for="toggle" class="flex items-center cursor-pointer group">
+          <!-- toggle -->
+          <div class="relative">
+            <!-- input -->
+            <input type="checkbox" id="toggle" class="sr-only" checked />
+
+            <!-- line -->
+            <div class="line block bg-neutral-50 w-14 h-8 rounded-full group-hover:opacity-50 duration-700"></div>
+            <!-- dot -->
+            <div class="dot absolute left-1 top-1 bg-white w-6 h-6 rounded-full transition"></div>
+          </div>
+        </label>
+        <div class="ml-3 font-medium">Monthly</div>
+      </div>
+    </header>
+    <main
+      class="flex flex-col items-center justify-center space-y-6 mt-8 md:flex-row md:space-y-0 text-primary-200 font-bold">
+      <!-- card 1 -->
+      <div class="card py-4 px-8 bg-white rounded-md text-center">
+        <h2 class="mb-6 text-xl">Basic</h2>
+        <h1 class="text-6xl text-primary-300 mb-8"><span class="text-4xl">&dollar;</span><span class="monthly">19.99</span>
+        <span class="annually hidden">199.99</span></h1>
+        <p class="py-6 border-t-2">500 GB Storage</p>
+        <p class="py-6 border-t-2">2 Users Allowed</p>
+        <p class="py-6 border-y-2">Send up to 3 GB</p>
+        <button class="mt-4 text-white w-full bg-gradient-to-r from-neutral-50 to-neutral-100 py-3 rounded-xl border-2 border-neutral-50 hover:bg-none hover:text-neutral-50 hover:-translate-y-0.5 duration-200">Learn More</button>
+      </div>
+      <!-- card 2 -->
+      <div class="card py-4 md:py-8 px-8 bg-gradient-to-r from-neutral-50 to-neutral-100 text-white rounded-md text-center">
+        <h2 class="mb-6 text-xl">  Professional
+        </h2>
+        <h1 class="text-6xl text-primary-50 mb-8"><span class="text-4xl">&dollar;</span><span class="monthly">24.99</span>
+        <span class="annually hidden">249.99</span></h1>
+        <p class="py-6 border-t-2">  1 TB Storage</p>
+        <p class="py-6 border-t-2">  5 Users Allowed</p>
+        <p class="py-6 border-y-2">  Send up to 10 GB</p>
+        <button class=" mt-4 text-neutral-50 w-full bg-primary-50 py-3 rounded-xl border-2 border-primary-50 hover:bg-opacity-0 hover:text-primary-50 hover:-translate-y-0.5 duration-200">Learn More</button>
+      </div>
+      <!-- card 3 -->
+      <div class="card py-4 px-8 bg-white rounded-md text-center">
+        <h2 class="mb-6 text-xl">  Master
+        </h2>
+        <h1 class="text-6xl text-primary-300 mb-8"><span class="text-4xl">&dollar;</span><span class="monthly">39.99</span>
+        <span class="annually hidden">399.99</span></h1>
+        <p class="py-6 border-t-2">2 TB Storage</p>
+        <p class="py-6 border-t-2">10 Users Allowed</p>
+        <p class="py-6 border-y-2">Send up to 20 GB</p>
+        <button class="mt-4 text-white w-full bg-gradient-to-r from-neutral-50 to-neutral-100 py-3 rounded-xl border-2 border-neutral-50 hover:bg-none hover:text-neutral-50 hover:-translate-y-0.5 duration-200">Learn More</button>
+   
+      </div>
+    </main>
+    <footer class="attribution text-md my-4">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Pranshu Sahu</a>.
+  </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

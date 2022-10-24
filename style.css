@@ -1,0 +1,14 @@
+body{
+    background-image: url(images/bg-top.svg),url(images/bg-bottom.svg);
+    background-repeat:no-repeat, no-repeat;
+    background-position:left 60vw bottom 0vh, right 60vw top 50vh;
+}
+input:checked ~ .dot {
+    transform: translateX(100%);
+  }
+  
+  .card{
+    width:min(95%,335px);
+  }
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
